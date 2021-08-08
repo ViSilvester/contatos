@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-title>
+      Cadastrar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Telefone" type="number" [(ngModel)]="telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-datetime  [(ngModel)]="dataNascimento" displayFormat="DD MM YY" placeholder="Data de nascimento"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "medium">Gênero</ion-label>
+      <ion-select placeholder="Selecione"  [(ngModel)]="sexo">
+        <ion-select-option value="Feminino">Feminino</ion-select-option>
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Outro">Outro</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+   
+    
+    <ion-button expand="block" (click) = "cadastrar()">
+      Cadastrar
+    </ion-button>
+    
+  </ion-list>
+
+</ion-content>
